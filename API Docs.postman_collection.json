@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "07b83329-c310-4a96-9113-b2e0babc6d95",
+		"name": "API Docs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15499812",
+		"_collection_link": "https://www.postman.com/gold-trinity-454853/workspace/jesw-suite/collection/15499812-07b83329-c310-4a96-9113-b2e0babc6d95?action=share&source=collection_link&creator=15499812"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"john@gmail.com\",\n    \"phoneNumber\": 123456789,\n    \"password\": \"strong password\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success case",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"john@gmail.com\",\n    \"phoneNumber\": 123456789,\n    \"password\": \"strong password\"\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "488"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e8-h/Id0QpZtEgp6RPP5g+zCUH2/44\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Mar 2024 12:22:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User created successfully\",\n    \"user\": {\n        \"_id\": \"65e1c89b07207372144cd1fe\",\n        \"email\": \"john@gmail.com\",\n        \"password\": \"$2a$12$UvPqVj5rD2qErDK.a2vhg.AFZqn.FTmaqniruT92ctdHo9w2ctiCq\",\n        \"phoneNumber\": 123456789,\n        \"createdAt\": \"2024-03-01T12:22:51.883Z\",\n        \"updatedAt\": \"2024-03-01T12:22:52.197Z\",\n        \"__v\": 0,\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTFjODliMDcyMDczNzIxNDRjZDFmZSIsImlhdCI6MTcwOTI5NTc3Mn0.5adH4Yi-OO0TOKFJig7CR-aZ_2IgA7rT5FDFTuA6Elw\",\n        \"lastLogin\": \"2024-03-01T12:22:52.197Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"john@gmail.com\",\n    \"password\": \"strong password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Case",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"john@gmail.com\",\n    \"password\": \"strong password\"   \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "195"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c3-Lf0413uxzZnOcrcEFqY3o4h2FQo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Mar 2024 12:23:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Logged in successfully\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTFjODliMDcyMDczNzIxNDRjZDFmZSIsImlhdCI6MTcwOTI5NTgyOH0.Rz0DdmEdQqbjYJBw-Dy2slLWfkOb6NoDMwVR5ltrmAY\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
